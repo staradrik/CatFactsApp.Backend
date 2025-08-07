@@ -118,7 +118,7 @@ La API Key pública para Giphy ya está incluida en `appsettings.json` para faci
 
 ```json
 "Giphy": {
-  "ApiKey": "voaNIOg1u7ONPbckzWK71C48YqCOkhVP"
+  "ApiKey": ""
 }
 ```
 
