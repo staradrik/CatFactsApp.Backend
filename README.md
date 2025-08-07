@@ -52,11 +52,21 @@ Esto levantará SQL Server en `localhost:1435`.
 
 #### 🔧 Configurar la cadena de conexión
 
-Editar el archivo `CatFactsApp.Backend.API/appsettings.json` para configurar la conexión a la base de datos:
+Crear el archivo `CatFactsApp.Backend.API/appsettings.Development.json` para configurar la conexión a la base de datos:
 
 ```json
+"Logging": {
+  "LogLevel": {
+    "Default": "Information",
+    "Microsoft.AspNetCore": "Warning"
+  }
+},
 "ConnectionStrings": {
   "DefaultConnection": "Server=your_server;Database=CatFactsApp_DB;TrustServerCertificate=True;User Id=your_user;Password=your_password;"
+},
+"AllowedHosts": "*",
+"Giphy": {
+  "ApiKey": ""
 }
 ```
 
