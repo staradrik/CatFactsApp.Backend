@@ -24,8 +24,13 @@ namespace CatFactsApp.Backend.Business.Services
 
             try
             {
+                // Limitar a máximo 3 palabras
+                var limitedQuery = string.Join(' ', query
+                    .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+                    .Take(3));
+
                 string apiKey = _configuration["Giphy:ApiKey"] ?? "voaNIOg1u7ONPbckzWK71C48YqCOkhVP";
-                string url = $"https://api.giphy.com/v1/gifs/search?api_key={apiKey}&q={Uri.EscapeDataString(query)}&limit=1";
+                string url = $"https://api.giphy.com/v1/gifs/search?api_key={apiKey}&q={Uri.EscapeDataString(limitedQuery)}&limit=1";
 
                 var client = _httpClientFactory.CreateClient();
                 var result = await client.GetFromJsonAsync<GiphyApiResponse>(url);
