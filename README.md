@@ -44,7 +44,7 @@ cd CatFactsApp.Backend
 #### 🐳 Opción rápida con Docker
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=2024" \
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=your_password" \
    -p 1435:1433 --name catfacts-sql -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
