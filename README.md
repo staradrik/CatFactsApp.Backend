@@ -56,7 +56,7 @@ Editar el archivo `CatFactsApp.Backend.API/appsettings.json` para configurar la 
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=127.0.0.1,1435;Database=CatFactsApp_DB;TrustServerCertificate=True;User Id=adriSA;Password=2024;"
+  "DefaultConnection": "Server=your_server;Database=CatFactsApp_DB;TrustServerCertificate=True;User Id=your_user;Password=your_password;"
 }
 ```
 
